@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1083114010787",
+    "project_id": "fb-base-213",
+    "storage_bucket": "fb-base-213.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083114010787:android:b60ec7daa9ed076c8fa716",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRt2waR_cO77SptnFgx38jPoOaqM28pA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
