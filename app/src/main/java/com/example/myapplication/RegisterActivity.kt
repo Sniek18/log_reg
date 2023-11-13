@@ -53,14 +53,14 @@ class RegisterActivity : AppCompatActivity() {
                     .addOnCompleteListener { task->
                         if (task.isSuccessful)
                         {
-                            val user = hashMapOf(
-                                "username" to registerUsernameEditText.text.toString(),
-                                "email" to registerEmailEditText.text.toString(),
-                                "photoURL" to it.toString()
-                            )
                             val imageRef = storage.child("profilePictures/${auth.currentUser!!.uid}")
                             imageRef.putFile(profilePicUri!!).onSuccessTask { _->
                                 imageRef.downloadUrl.onSuccessTask {
+                                    val user = hashMapOf(
+                                        "username" to registerUsernameEditText.text.toString(),
+                                        "email" to registerEmailEditText.text.toString(),
+                                        "photoURL" to it.toString()
+                                    )
                                     db.collection("users").document(auth.currentUser!!.uid).set(user)
                                         .addOnCompleteListener {result->
                                         if(result.isSuccessful)
